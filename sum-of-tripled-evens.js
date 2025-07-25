@@ -13,9 +13,12 @@ function sumOfTripledEvens(n) {
         numbers.push(i);
     }
 
-    let tripledEvens = numbers.filter(number => number % 2 == 0).map(item => item * 3);
-    let sumOfTripledEvens = tripledEvens.reduce((a, b) => a + b);
-    return sumOfTripledEvens;
+    return numbers
+      .filter(number => number % 2 == 0)
+      .map(number => number * 3)
+      .reduce((a, b) => a + b);
 
 }
 
+
+console.log(sumOfTripledEvens(50));
